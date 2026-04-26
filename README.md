@@ -178,7 +178,7 @@ Variáveis CSS:
 ```
 
 ### Imagens
-Substituir mockups ou banners.
+Substituir mockups ou banners
 
 ---
 
