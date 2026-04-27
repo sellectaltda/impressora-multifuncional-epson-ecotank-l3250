@@ -619,10 +619,32 @@
     }
     .footer-box {
       padding: 24px; border-radius: var(--radius);
-      border: 1px solid var(--border);
-      background: var(--bg-card);
+      border: 1px solid rgba(220,38,38,0.3);
+      background: rgba(220,38,38,0.07);
     }
-    .footer-box p { margin-bottom: 8px; font-size: 0.88rem; }
+    .footer-box p { margin-bottom: 8px; font-size: 0.88rem; color: #fff; }
+    .footer-box .footer-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #ef4444;
+      margin-bottom: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .footer-box--warning {
+      background: rgba(180, 20, 20, 0.08);
+      border-color: rgba(220, 38, 38, 0.28);
+    }
+    .footer-box--warning p { color: #f0f2f7; }
+    .footer-warning-title {
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #f87171 !important;
+      margin-bottom: 10px !important;
+    }
 
     /* --- REVEAL --- */
     .reveal {
@@ -825,14 +847,27 @@
             <li>&#10003; Tanque recarregável</li>
           </ul>
 
-          <div class="cta-wrap">
-            <span class="microcopy" style="margin-bottom:4px;">Preço sujeito à alteração conforme estoque.</span>
-          </div>
+          <div class="offer-comparator" aria-label="Compare e escolha onde comprar">
+            <p class="offer-comparator-title" style="font-size:0.92rem;color:#fff;">🛒 Compare e escolha onde comprar</p>
+            <div class="offer-grid">
+              <a href="#" class="offer-btn ml affiliate-link" target="_blank" rel="noopener sponsored" aria-label="Ver oferta no Mercado Livre">
+                <span class="btn-icon">🛍️</span>
+                <span class="btn-label">Mercado Livre<small>Ver oferta →</small></span>
+              </a>
+              <a href="#" class="offer-btn amz affiliate-link" target="_blank" rel="noopener sponsored" aria-label="Ver oferta na Amazon">
+                <span class="btn-icon">📦</span>
+                <span class="btn-label">Amazon<small>Ver oferta →</small></span>
+              </a>
+              <a href="#" class="offer-btn mag affiliate-link" target="_blank" rel="noopener sponsored" aria-label="Ver oferta na Magazine Luiza">
+                <span class="btn-icon">🏪</span>
+                <span class="btn-label">Magazine Luiza<small>Ver oferta →</small></span>
+              </a>
+              <a href="#" class="offer-btn shp affiliate-link" target="_blank" rel="noopener sponsored" aria-label="Ver oferta na Shopee">
+                <span class="btn-icon">🛒</span>
+                <span class="btn-label">Shopee<small>Ver oferta →</small></span>
+              </a>
+            </div>
 
-
-          <div class="trust-row" aria-label="Elementos de confiança">
-            <span>Pagamento e preço consultados no marketplace</span>
-            <span>Modelo ideal para uso doméstico e profissional leve</span>
           </div>
 
         </div>
@@ -869,18 +904,18 @@
           <article class="versus-card bad reveal" aria-label="Problemas do cartucho tradicional">
             <h3>Cartucho tradicional</h3>
             <ul class="check-list">
-              <li><span>&#10060;</span> custo mais alto em uso recorrente</li>
-              <li><span>&#10060;</span> menor duração para quem imprime bastante</li>
-              <li><span>&#10060;</span> necessidade de trocas mais frequentes</li>
+              <li><span>&#10060;</span> Custo mais alto em uso recorrente</li>
+              <li><span>&#10060;</span> Menor duração para quem imprime bastante</li>
+              <li><span>&#10060;</span> Necessidade de trocas mais frequentes</li>
             </ul>
           </article>
 
           <article class="versus-card good reveal" aria-label="Vantagens do tanque de tinta">
             <h3>Tanque de tinta</h3>
             <ul class="check-list">
-              <li><span>&#9989;</span> economia para rotinas com maior volume</li>
-              <li><span>&#9989;</span> mais praticidade no dia a dia</li>
-              <li><span>&#9989;</span> melhor rendimento por recarga</li>
+              <li><span>&#9989;</span> Economia para rotinas com maior volume</li>
+              <li><span>&#9989;</span> Mais praticidade no dia a dia</li>
+              <li><span>&#9989;</span> Melhor rendimento por recarga</li>
             </ul>
           </article>
         </div>
@@ -1032,7 +1067,7 @@
         <div class="faq-list" aria-label="Perguntas frequentes">
           <article class="faq-item reveal">
             <button class="faq-question" aria-expanded="false" aria-controls="faq-1" id="faq-btn-1">
-              imprime colorido?
+              Imprime colorido?
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" id="faq-1" role="region" aria-labelledby="faq-btn-1">
@@ -1044,7 +1079,7 @@
 
           <article class="faq-item reveal">
             <button class="faq-question" aria-expanded="false" aria-controls="faq-2" id="faq-btn-2">
-              funciona no celular?
+              Funciona no celular?
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" id="faq-2" role="region" aria-labelledby="faq-btn-2">
@@ -1056,7 +1091,7 @@
 
           <article class="faq-item reveal">
             <button class="faq-question" aria-expanded="false" aria-controls="faq-3" id="faq-btn-3">
-              usa cartucho?
+              Usa cartucho?
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" id="faq-3" role="region" aria-labelledby="faq-btn-3">
@@ -1068,7 +1103,7 @@
 
           <article class="faq-item reveal">
             <button class="faq-question" aria-expanded="false" aria-controls="faq-4" id="faq-btn-4">
-              tem scanner?
+              Tem scanner?
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" id="faq-4" role="region" aria-labelledby="faq-btn-4">
@@ -1096,7 +1131,7 @@
     <section class="section">
       <div class="container">
         <div class="offer-comparator" aria-label="Compare e escolha onde comprar" style="max-width:780px;margin:0 auto;">
-          <p class="offer-comparator-title">🛒 Compare e escolha onde comprar</p>
+          <p class="offer-comparator-title" style="font-size:0.92rem;color:#fff;">🛒 Compare e escolha onde comprar</p>
           <div class="offer-grid">
             <a href="https://meli.la/2LYRqcs"
                class="offer-btn ml"
@@ -1112,19 +1147,19 @@
               <span class="btn-icon">📦</span>
               <span class="btn-label">Amazon<small>Ver oferta →</small></span>
             </a>
-            <a href="#"
-               class="offer-btn mag disabled"
+            <a href="https://divulgador.magalu.com/yc8PJyCZ"
+               class="offer-btn mag"
                target="_blank" rel="nofollow sponsored noopener"
-               title="Magazine Luiza – link em breve">
+               aria-label="Ver oferta na Magazine Luiza">
               <span class="btn-icon">🏪</span>
-              <span class="btn-label">Magazine Luiza<small>Em breve →</small></span>
+              <span class="btn-label">Magazine Luiza<small>Ver oferta →</small></span>
             </a>
-            <a href="#"
-               class="offer-btn shp disabled"
+            <a href="https://s.shopee.com.br/3LNEU7fueQ"
+               class="offer-btn shp"
                target="_blank" rel="nofollow sponsored noopener"
-               title="Shopee – link em breve">
+               aria-label="Ver oferta na Shopee">
               <span class="btn-icon">🛒</span>
-              <span class="btn-label">Shopee<small>Em breve →</small></span>
+              <span class="btn-label">Shopee<small>Ver oferta →</small></span>
             </a>
           </div>
           <p class="microcopy" style="text-align:center;margin-top:12px;">Preço sujeito à alteração conforme estoque e plataforma.</p>
@@ -1148,17 +1183,168 @@
 
   </div>
 
-  <footer>
-    <div class="container">
-      <div class="footer-box reveal">
-        <p>
-          Este site é uma página independente de análise de produto. Não possui vínculo oficial com a Epson e pode receber comissão por indicação.
-        </p>
-        <p>
-          As informações desta página têm caráter informativo e promocional. Antes de comprar, confirme preço, frete, condições e disponibilidade diretamente na página da oferta.
-        </p>
+
+  <style>
+  .legal-section{
+      max-width:660px;
+      margin:50px auto;
+      padding:0 20px;
+  }
+  .legal-section-title-wrap{
+      text-align:center;
+      margin-bottom:28px;
+  }
+  .legal-section-eyebrow{
+      display:block;
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:3px;
+      text-transform:uppercase;
+      color:#93c5fd;
+      margin-bottom:8px;
+  }
+  .legal-section h2{
+      display:inline-block;
+      font-size:34px;
+      font-weight:700;
+      letter-spacing:-0.03em;
+      color:var(--text);
+      -webkit-text-fill-color:unset;
+      background:none;
+      margin:0 0 6px;
+  }
+  .legal-section-line{
+      width:48px;
+      height:3px;
+      background:linear-gradient(90deg, #3b82f6, #818cf8);
+      border-radius:2px;
+      margin:8px auto 0;
+  }
+  .accordion-item{
+      border:1px solid rgba(255,255,255,0.07);
+      border-radius:10px;
+      margin-bottom:10px;
+      overflow:hidden;
+      background:#13161e;
+      box-shadow:0 8px 32px rgba(0,0,0,0.4);
+      transition:border-color .25s;
+  }
+  .accordion-item:hover{ border-color:rgba(59,130,246,0.28); }
+  .accordion-header{
+      width:100%;
+      background:#181c27;
+      border:none;
+      padding:12px 16px;
+      font-size:14px;
+      font-weight:600;
+      text-align:left;
+      cursor:pointer;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      font-family:inherit;
+      color:#f0f2f7;
+      transition:background .2s;
+  }
+  .accordion-header:hover{ background:rgba(59,130,246,0.06); }
+  .accordion-header span{
+      width:24px;
+      height:24px;
+      border-radius:50%;
+      background:rgba(59,130,246,0.1);
+      border:1px solid rgba(59,130,246,0.2);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:16px;
+      color:#93c5fd;
+      line-height:1;
+      flex-shrink:0;
+      transition:transform .3s, background .2s;
+  }
+  .accordion-item.active .accordion-header span{
+      transform:rotate(45deg);
+      background:rgba(59,130,246,0.22);
+  }
+  .accordion-content{
+      max-height:0;
+      overflow:hidden;
+      transition:max-height .4s ease;
+      padding:0 16px;
+      line-height:1.75;
+      background:#13161e;
+      color:#8892a4;
+      font-size:13.5px;
+  }
+  .accordion-content h3{
+      font-size:12px;
+      font-weight:700;
+      color:#93c5fd;
+      margin:12px 0 2px;
+      text-transform:uppercase;
+      letter-spacing:.5px;
+  }
+  .accordion-content p{ margin:0 0 8px; }
+  .accordion-item.active .accordion-content{
+      max-height:1500px;
+      padding:14px 16px;
+  }
+  </style>
+
+  <section class="legal-section">
+    <div class="legal-section-title-wrap">
+      <span class="legal-section-eyebrow">Transparência &amp; Conformidade</span>
+      <h2>Informações Legais</h2>
+      <div class="legal-section-line"></div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Termos de Uso
+        <span>+</span>
+      </button>
+      <div class="accordion-content">
+        <h3>1. Finalidade do site</h3>
+        <p>O SELLECTA Ofertas é um site independente voltado à divulgação de análises, reviews, comparativos e recomendações de produtos comercializados por terceiros.</p>
+        <h3>2. Natureza informativa</h3>
+        <p>As informações publicadas possuem caráter informativo e promocional, podendo sofrer alterações de preço, estoque, frete e condições comerciais.</p>
+        <h3>3. Links de afiliado</h3>
+        <p>Alguns links podem gerar comissão ao SELLECTA Ofertas sem custo adicional ao comprador.</p>
+        <h3>4. Responsabilidade sobre compras</h3>
+        <p>As compras são realizadas diretamente em plataformas terceiras, que são responsáveis por pagamento, entrega, troca e garantia.</p>
+        <h3>5. Alterações</h3>
+        <p>Estes termos poderão ser atualizados periodicamente.</p>
       </div>
     </div>
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Política de Privacidade
+        <span>+</span>
+      </button>
+      <div class="accordion-content">
+        <h3>1. Dados coletados</h3>
+        <p>Podemos coletar informações como IP, navegador, dispositivo, páginas visitadas, origem do tráfego e interações no site.</p>
+        <h3>2. Cookies e rastreamento</h3>
+        <p>Utilizamos cookies, Google Analytics, Meta Pixel e tags de conversão para análise de desempenho e campanhas publicitárias.</p>
+        <h3>3. Compartilhamento</h3>
+        <p>Não vendemos dados pessoais. Informações podem ser compartilhadas apenas com parceiros tecnológicos necessários à operação do site.</p>
+        <h3>4. Direitos do usuário</h3>
+        <p>Você pode solicitar acesso, correção ou exclusão de dados, conforme a LGPD.</p>
+        <h3>5. Segurança</h3>
+        <p>Adotamos medidas razoáveis para proteção das informações tratadas.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+  document.querySelectorAll('.accordion-header').forEach(btn => {
+      btn.addEventListener('click', () => {
+          const item = btn.parentElement;
+          item.classList.toggle('active');
+      });
+  });
+  </script>
+
+  <footer>
   </footer>
 
   <script>
